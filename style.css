@@ -1,0 +1,912 @@
+/* Reset des marges et des paddings pour tous les éléments, et définition de box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+/* Styles de base pour le corps de la page */
+body {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; /* Permet une disposition verticale des sections */
+    font-family: "Poppins"; /* Police utilisée */
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Section d'accueil avec un arrière-plan dégradé */
+.section-accueil {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(rgb(139, 195, 245), #1294b8);
+}
+
+/* Conteneur du menu de navigation */
+.menu-container {
+    display: flex;
+    justify-content: space-between; /* Distribution des éléments entre gauche et droite */
+    align-items: center;
+    padding: 1em 2em;
+    width: 100%;
+}
+
+/* Style du titre dans le menu */
+.titre1 {  
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+}
+
+/* Conteneur pour les liens de menu */
+.menu {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/* Style pour les liens du menu */
+.menu nav {
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.menu nav a {
+    text-decoration: none; /* Suppression du soulignement */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Effet de transition pour hover */
+}
+
+/* Section pour les icônes sociales */
+.social-icon {
+    justify-content: center;
+    width: 20%;
+    display: flex;
+    gap: 20px;
+    align-content: center;
+}
+
+/* Texte d'introduction */
+.intro {
+    width: 100%;
+    min-height: 80%;
+    gap: 10%; /* Espacement entre les éléments enfants */
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    padding-top: 6em; /* Marge supérieure pour espacement */
+}
+
+/* Conteneur pour le contenu principal de l'intro */
+.intro-container {
+    width: 30%;
+    align-items: center;
+    padding-top: 2em;
+}
+
+/* Titre principal de l'intro */
+.intro-titre {
+    font-size: 3em;
+    line-height: 1.7em; /* Espacement entre les lignes */
+}
+
+/* Paragraphe d'intro avec style gras et justifié */
+.intro-p {
+    margin: 2em 0;
+    font-size: 1.4em;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+/* Formulaire d'abonnement */
+.intro-subscribe {
+    position: relative;
+    border: none;
+    background-color: #e0eff6;
+    border-radius: 30px; /* Bord arrondi */
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+
+/* Bouton pour soumettre l'email */
+.intro-subscribe button {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    width: 25%;
+    height: 80%;
+    text-align: center;
+    background-color: #0383bd; /* Couleur principale */
+    top: 10%;
+    right: 1%;
+    color: white;
+}
+
+/* Effet hover sur le bouton d'abonnement */
+.intro-subscribe button:hover {
+    background-color: #9edffa; /* Changement de couleur au survol */
+}
+
+/* Input pour l'email */
+#email {
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    background: none;
+    height: 100%;
+    padding-left: 5%; /* Espacement interne à gauche */
+}
+
+/* Conteneur pour l'illustration dans l'intro */
+.intro-illustration {
+    width: 35%;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Section features  */
+.section-features {
+    width: 100%; 
+    min-height: 100vh; /* Assure que la section occupe toute la hauteur visible de l'écran */
+    background: white; 
+}
+
+/* Conteneur global pour les produits, avec alignement centré */
+.products {
+    width: 100%;    
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+/* Section des caractéristiques des produits */
+.products-features {
+    display: flex; 
+    flex-direction: column; /* Disposition verticale des éléments */
+    width: 100%; 
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    margin-top: 3em; 
+}
+
+/* Style pour le titre des caractéristiques des produits */
+.products-features h2 {
+    font-size: 1.8em; 
+}
+
+/* Texte descriptif dans les caractéristiques des produits */
+.products-features p {
+    margin-top: 1em; 
+    width: 30%; 
+    text-align: center; 
+    font-weight: bolder; /* Met en gras le texte pour une meilleure visibilité */
+    color: grey; 
+    font-size: 1.2em; 
+}
+
+/* Conteneur général regroupant toutes les cartes de produits */
+.products-containers {
+    margin-top: 2em; 
+    width: 100%; /* Utilise toute la largeur disponible */
+    min-height: 50%; /* Définit une hauteur minimale pour la section */
+    display: flex; /* Utilisation de flexbox pour aligner les cartes */
+    justify-content: center; /* Centre les cartes horizontalement */
+}
+
+/* Style des cartes */
+.container {
+    margin: 10px; /* Espace autour de chaque carte */
+    border: none; /* Supprime les bordures */
+    display: flex; 
+    background: radial-gradient(rgb(139, 195, 245), #1294b8); /* Dégradé radial pour un effet visuel attractif */
+    border-radius: 10px; /* Coins arrondis  */
+    box-shadow: 0px 5px 5px #bdc3c5; /* Ombre légère pour un effet de relief */
+    color: white; 
+    flex-direction: column; 
+    width: 20%; /* Taille des cartes ajustée à 20% de la largeur parent */
+    height: 400px; /* Hauteur fixe des cartes */
+    transition: transform 0.3s ease-in-out; /* Animation de transition fluide lors du survol */
+    margin-bottom: 5em; /* Espace supplémentaire en bas des cartes */
+}
+
+/* Animation lorsque la carte est survolée */
+.container:hover {
+    transform: translateY(-10px); /* Légère élévation visuelle */
+    transition: transform 0.3s ease-in-out; /* Transition fluide pour l'animation */
+}
+
+/* Icônes dans les cartes (Font Awesome) */
+.fa-solid {
+    font-size: 40px; 
+    text-align: center; 
+    margin-top: 60px; /* Espace au-dessus des icônes */
+}
+
+/* Titre dans les cartes */
+.container h3 {
+    font-size: 1.5em; 
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+/* Texte descriptif dans les cartes */
+.container p {
+    font-weight: bolder; /* Texte en gras  */
+    text-align: center; /* Centre le texte */
+    margin: 20px 50px 0px 50px; /* Marges latérales pour limiter la largeur */
+    font-size: 0.8em; /* Taille plus petite pour du texte secondaire */
+}
+
+/* Section dédiée à une autre fonctionnalité (par exemple, "Works") */
+.works {
+    display: flex; 
+    flex-direction: column; /* Disposition verticale */
+    width: 100%; 
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 5em; 
+}
+
+/* Titre de la section "Works" */
+.works h2 {
+    font-size: 1.8em; 
+}
+
+/* Texte descriptif dans la paragraph */
+.works p {
+    margin-top: 1em; 
+    width: 30%; 
+    text-align: center; 
+    font-weight: bolder; 
+    color: grey; 
+    font-size: 1.2em; 
+}
+
+/* Section principale de l'équipe */
+.section-equipe {
+    width: 100%;
+    min-height: 100vh; /* Assure que la section occupe toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrage vertical du contenu */
+    align-items: center; /* Centrage horizontal du contenu */
+}
+
+/* Container principal des équipes */
+.equipes {
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+/* Présentation de l'équipe */
+.equipe-presentation {
+    width: 800px; /* Largeur fixe pour la présentation */
+    display: flex;
+    flex-direction: column;
+    margin: auto; /* Centrage horizontal */
+    padding: 1em; /* Espacement intérieur */
+}
+
+/* Style pour le titre de la présentation */
+.equipe-presentation h3 {
+    font-size: 2em;
+    text-align: center; /* Centrage du titre */
+}
+
+/* Style pour la description sous le titre */
+.equipe-presentation p {
+    margin-top: 1em;
+    text-align: center; /* Centrage du texte */
+    font-weight: bolder; /* Texte en gras */
+    color: grey; /* Couleur gris */
+    font-size: 1.2em; /* Taille de la police */
+}
+
+/* Container pour les membres de l'équipe */
+.equipe-content {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes si nécessaire */
+    justify-content: space-evenly; /* Répartition uniforme des éléments */
+    margin-top: 5em; /* Espacement au-dessus du container */
+    width: 100%;
+}
+
+/* Style pour chaque membre de l'équipe */
+.personnes {
+    margin: 15px;
+    width: 20%; /* Chaque membre prend 20% de la largeur de l'écran */
+    max-width: 250px; /* Limite la largeur maximale à 250px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centrage du texte */
+    transition: transform 0.3s ease-in-out; /* Transition lors du survol */
+}
+
+/* Titre du membre (son nom par exemple) */
+.equipe-titre h3 {
+    font-weight: 500; /* Poids de police modéré */
+}
+
+/* Container pour l'image du membre */
+.image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Limite la largeur maximale de l'image */
+}
+
+/* Centrage de l'image dans le container */
+.image figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icône qui apparaît au survol de l'image */
+.icon {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; /* Initialement invisible */
+    left: 0;
+    bottom: 150px;
+}
+
+/* Style de l'icône, ronde avec un fond blanc */
+.ic {
+    color: black;
+    background-color: white;
+    border-radius: 50%; /* Forme ronde */
+    background-size: 30px;
+}
+
+/* Style du nom du membre (h3 sous l'image) */
+.personnes h3 {
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+/* Style pour la description du membre (poste, rôle, etc.) */
+.personnes p {
+    font-weight: bolder;
+    color: grey;
+}
+
+/* Style pour l'image du membre, avec filtre en niveaux de gris par défaut */
+.personnes img {
+    margin-top: 2em;
+    width: 200px;
+    border-radius: 50%; /* Forme ronde de l'image */
+    filter: grayscale(1); /* Applique un filtre en niveaux de gris */
+    transition: all 0.5s ease-in-out; /* Transition au survol */
+}
+
+/* Effet au survol de l'image : elle devient plus grande et perd son filtre en niveaux de gris */
+.image:hover img {
+    transform: scale(1.1); /* Agrandit l'image */
+    transition: all 0.5s ease-in-out;
+    filter: none; /* Retire le filtre en niveaux de gris */
+}
+
+/* Apparition de l'icône au survol de l'image */
+.image:hover .icon {
+    opacity: 1; /* Rendre l'icône visible */
+    left: 15%; /* Déplacement horizontal de l'icône */
+    bottom: 100px; /* Déplacement vertical de l'icône */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Style du sous-titre ou rôle du membre */
+.personnes h2 {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+}
+
+/* Container pour le titre de chaque membre */
+.equipe-titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments du titre */
+}
+
+
+/* Section avec effet Parallax */
+.section-parallax {
+    padding: 5em 0;
+    width: 100%;
+}
+
+/* Effet Parallax : image de fond fixée et centrée */
+.parallax {
+    background-image: url(img/parallax.png);
+    height: 500px;
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Conteneur du titre avec fond semi-transparent */
+.parallax-titre {
+    width: 100%;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.6); /* Fond sombre transparent */
+    align-content: center;
+    justify-content: center;
+}
+
+/* Taille du titre */
+.parallax-titre h3 {
+    font-size: 2em;
+}
+
+/* Paragraphe centré */
+.parallax-titre p {
+    padding-top: 1em;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-weight: 200;
+}
+
+/* Bouton avec effet au survol */
+.parallax-button {
+    margin-top: 2em;
+}
+
+.parallax-button button {
+    padding: .8em 2.5em;
+    background: none;
+    border: .5px solid white;
+    border-radius: 5px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Effet de survol du bouton */
+.parallax-button button:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Section principale du blog */
+.section-blog {
+    width: 100%;
+    padding: 1em 0;
+}
+
+/* Conteneur principal du blog avec disposition flexible */
+.blog {
+    display: flex;
+    justify-content: space-evenly; /* Espacement égal entre les éléments */
+    align-items: stretch; /* Les éléments s'étendent pour occuper toute la hauteur */
+    margin: 0 auto;
+    width: 85%;
+}
+
+/* Conteneur pour chaque section du blog */
+.our-blog {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+/* Taille du titre de la section du blog */
+.our-blog h2{
+    font-size: 1.8em;
+}
+
+/* Description sous le titre avec un texte gris et plus gros */
+.our-blog p{    
+    margin-top: 1em; 
+    text-align: center;
+    font-weight: bolder;
+    color: grey;    
+    font-size: 1.2em;
+}
+
+/* Style des cartes du blog */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 15px;
+    background-color: white;
+    padding: 1em;
+}
+
+/* Conteneur pour l'image du blog */
+.blog-header  {
+    position: relative;
+}
+
+/* Style pour l'image d'en-tête du blog */
+.blog-header img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Info de l'auteur avec un texte blanc, placé en haut à gauche */
+.auteur-info{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-weight: 300;
+    opacity: 0; /* Initialement caché */
+}
+
+/* Mise en évidence du nom de l'auteur */
+.auteur-info span:first-of-type{
+    font-weight: 600;
+}
+
+/* Effet au survol sur l'image */
+.blog-header img:hover{       
+    filter: brightness(0.5); /* Assombrissement de l'image */
+}
+
+/* Affichage des informations de l'auteur au survol */
+.blog-header:hover .auteur-info{
+    opacity: 1;
+}
+
+/* Style pour le titre de chaque carte de blog */
+.blog-card h4 {
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+/* Description dans la carte du blog */
+.blog-card p {
+    margin-top: 1em;
+    color: grey;
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+/* Style du lien dans la carte du blog */
+.blog-card a {
+    text-decoration: none;
+    color: #0383bd; /* Couleur bleue pour le lien */
+    font-weight: 500;
+}
+
+/* Section pour l'affichage des prix */
+.section-pricing {
+    width: 100%;
+    min-height: 100vh; /* Hauteur minimale de la section */
+    padding: 5em 0;
+    padding-bottom: 0;
+}
+
+/* Conteneur principal des éléments de la section pricing */
+.pricing{
+    width: 100%;
+    height: 30%;    
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-self: center;
+    align-content: center; /* Centre les éléments verticalement */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section de landing pour la page des prix */
+.pricing-landing-page {   
+    margin-left: 5em; /* Espacement à gauche */
+    display: flex;
+    flex-direction: row; /* Disposition en ligne */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    gap: 12em; /* Espacement entre les éléments */
+    justify-content: center;
+    align-content: center;
+}
+
+/* Conteneur du texte à gauche */
+.pricing-text{
+    width: 45%;
+}
+
+/* Taille et espacement du titre */
+.pricing-text h3{
+    font-size: 30px;
+    margin-bottom: 2em;
+}
+
+/* Description sous le titre */
+.pricing-text p{
+    font-size: 1.4em;
+    margin-bottom: 2em;
+}
+
+/* Conteneur pour les statistiques de prix */
+.pricing-statistic{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+/* Style des titres dans les statistiques */
+.pricing-statistic h4{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* Style pour le bouton de prix */
+.pricing-text button{    
+    width: 180px;
+    height: 50px;
+    border-radius: 5px; /* Coins arrondis */
+    background-color: rgb(92,142,250); /* Couleur de fond bleu */
+    font-size: 20px;
+    color: white;
+    cursor: pointer; /* Curseur en forme de main */
+    margin-bottom: 0%;
+}
+
+/* Conteneur pour l'image à droite */
+.pricing-image{
+    width: 45%;
+    margin-right: 10px;
+}
+
+/* Style de l'image dans le conteneur */
+.pricing-image img{
+    width: 90%;    
+}
+
+/* Conteneur général pour la section de prix */
+.pricing-container{
+    padding: 1em;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(245, 245, 245); /* Fond gris clair */
+}
+
+/* Conteneur avec un texte centré pour la section "Notre Prix" */
+.our-pricing{
+    margin: auto;
+    width: 600px;
+    text-align: center;    
+}
+
+/* Style du titre dans "Notre Prix" */
+.our-pricing h2{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* Description dans "Notre Prix" */
+.our-pricing p{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Conteneur pour les différentes options de prix */
+.pricing-containers{
+    padding: 5em;
+    display: flex;
+    flex-direction: row; /* Disposition en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 1em; /* Espacement entre les éléments */
+}
+
+/* Conteneur individuel pour chaque option de prix */
+.containers{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    width: 20%;
+    background-color: white; /* Fond blanc */
+    border-radius: 5%; /* Coins arrondis */
+    box-shadow: 0px 5px 5px #bdc3c5; /* Ombre portée légère */
+}
+/* Conteneur pour l'élément avec position relative */
+.advanced{
+    position: relative;
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+
+/* Style pour l'étiquette de promotion (sale) */
+.sale{
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(92,142,250); /* Couleur bleue */
+    color: white;
+    border-radius: 5% 25%; /* Coins arrondis */
+}
+
+/* Style du titre dans les containers */
+.containers h3{
+    text-align: center;
+}
+
+/* Style du texte dans les containers */
+.containers p{    
+    font-size: 3em;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(92,142,250); /* Couleur bleue */
+    padding-bottom: 0.6em;
+}
+
+/* Style de l'élément dollar avec taille plus petite */
+.dollar{
+    font-size: 0.5em;
+}
+
+/* Style du texte pour les mois avec couleur grise et taille petite */
+.month{
+    color: rgb(100, 100, 100); /* Couleur grise */
+    font-size: 0.2em;
+}
+
+/* Conteneur pour la description avec un marging modifié */
+.description{
+    margin-left: 0;
+}
+
+/* Liste sans puces avec éléments alignés verticalement */
+.lines{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    gap: 1em; /* Espacement entre les éléments */
+}
+
+/* Ligne individuelle avec disposition en ligne */
+.line{
+    display: flex;
+    flex-direction: row;
+    gap: 5px; /* Espacement entre les éléments dans la ligne */
+}
+
+/* Valeur alignée à droite */
+.value{
+    margin-left: auto;
+}
+
+/* Style pour le symbole de coche (check) */
+.check{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 1px solid green; /* Bordure verte */
+    color: green;
+    border-radius: 50%; /* Forme circulaire */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour le symbole de croix (cross) */
+.cross{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 1px solid red; /* Bordure rouge */
+    color: red;
+    border-radius: 50%; /* Forme circulaire */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bouton pour rejoindre avec un style centré */
+.join-now-btn{
+    margin-top: 2em;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0.5em 2em;
+    background-color: rgb(92,142,250); /* Couleur bleue */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+}
+
+/* Bouton fixe dans le coin inférieur droit de la page */
+#myBtn {    
+    position: fixed; /* Position fixe */
+    bottom: 20px; /* 20px du bas de la page */
+    right: 30px; /* 30px du côté droit de la page */    
+    cursor: pointer; /* Curseur de type main au survol */
+    background: none; /* Aucun fond pour l'icône */
+    border: none; /* Pas de bordure */
+}
+
+/* Effet au survol du bouton fixe */
+#myBtn:hover {
+    color: rgb(96, 95, 95); /* Couleur au survol */
+}
+/* Section pour le pied de page */
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(50, 50, 50); /* Fond gris foncé */
+    display: flex;
+    flex-direction: column; /* Disposition verticale des éléments */
+}
+
+/* Conteneur du pied de page avec centrage des éléments */
+.footer-container{
+    display: flex;
+    margin: auto;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+/* Conteneur du pied de page avec texte de couleur claire */
+.footer-container{
+    color: rgb(210, 209, 209); /* Couleur gris clair */
+    display: flex;
+    flex-direction: column; /* Disposition en colonne */
+    gap: 1.5em; /* Espacement entre les éléments */
+}
+
+/* Conteneur des icônes de réseaux sociaux */
+.footer-icons {
+    display: flex; 
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 2em; /* Espacement entre les icônes */
+    margin: auto; 
+    width: fit-content; /* Adapte la largeur au contenu */
+}
+
+/* Style des icônes de réseaux sociaux */
+.footer-icons .fab{
+    border: 1px solid #bdc3c5; /* Bordure grise claire */
+    border-radius: 50%; /* Icônes circulaires */
+    color: rgb(210, 209, 209); /* Couleur des icônes */
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 40px; /* Taille de l'icône */
+    height: 40px; /* Taille de l'icône */
+    justify-content: space-between;
+}
+
+/* Liens du pied de page */
+.footer-links{   
+    display: flex;
+    gap: 1em; /* Espacement entre les liens */
+    color: rgb(210, 209, 209); /* Couleur gris clair */
+}
+
+/* Style des liens dans le pied de page */
+.footer-links a{
+    color: rgb(210, 209, 209); /* Couleur des liens */
+    text-decoration: none; /* Supprime la décoration de texte */
+}
